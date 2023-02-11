@@ -1,46 +1,17 @@
-export interface AcademicYearRegistration {
-  id: number,
-  academicYear: number,
-  academicProgram: string,
-  renewed: boolean
+export interface JWT {
+  jwt: string
 }
 
-export interface AcceptedRegistration {
-  message: string
-}
-
-export interface Student {
-  id: number,
+export interface User {
+  firstName: string,
+  lastName: string,
+  email: string,
+  phoneNumber: string,
   username: string,
   password: string
 }
 
-export interface AcademicProgram {
-  id: number,
-  name: string,
-  code: string
-}
+export interface ServiceFacility {
 
-export interface RegistrationForm {
-  groupsOdd: Group[]
-  groupsEven: Group[]
-  subjectsOdd: Subject[]
-  subjectsEven: Subject[]
-}
-
-export interface Group {
-  id: number,
-  name: string,
-  subjects: Subject[]
-}
-
-export interface Subject {
-  id: number,
-  name: string,
-  academic_year: number
-}
-
-export interface JWT {
-  jwt: string
 }
 

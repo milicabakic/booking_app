@@ -13,6 +13,7 @@ import {DatePipe} from "@angular/common";
 import { LoginComponent } from './component/login/login.component';
 import { RegisterComponent } from './component/register/register.component';
 import { ProviderHomeComponent } from './component/provider-home/provider-home.component';
+import { BookingListComponent } from './component/booking-list/booking-list.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ProviderHomeComponent } from './component/provider-home/provider-home.c
     HomeComponent,
     LoginComponent,
     RegisterComponent,
-    ProviderHomeComponent
+    ProviderHomeComponent,
+    BookingListComponent
   ],
   imports: [
     BrowserModule,
