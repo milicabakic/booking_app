@@ -21,24 +21,24 @@
       <p class="divider-text">
         <span class="bg-light">OR</span>
       </p>
-      <form>
+      <form (submit)="register_user()">
         <div class="form-group input-group">
           <div class="input-group-prepend">
             <span class="input-group-text"> <i class="fa fa-user"></i> </span>
           </div>
-          <input name="" class="form-control" placeholder="Name" type="text">
+          <input name="name" class="form-control" placeholder="Name" type="text" [(ngModel)]="name">
         </div>
         <div class="form-group input-group">
           <div class="input-group-prepend">
             <span class="input-group-text"> <i class="fa fa-user"></i> </span>
           </div>
-          <input name="" class="form-control" placeholder="Last name" type="text">
+          <input name="surname" class="form-control" placeholder="Surname" type="text" [(ngModel)]="surname">
         </div>
         <div class="form-group input-group">
           <div class="input-group-prepend">
             <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
           </div>
-          <input name="" class="form-control" placeholder="Email address" type="email">
+          <input name="email" class="form-control" placeholder="Email address" type="email" [(ngModel)]="email">
         </div>
         <div class="form-group input-group">
           <div class="input-group-prepend">
@@ -51,7 +51,7 @@
             <option value="2">+198</option>
             <option value="3">+701</option>
           </select>
-          <input name="" class="form-control" placeholder="Phone number" type="text">
+          <input name="phone_number" class="form-control" placeholder="Phone number" type="text" [(ngModel)]="phone_number">
         </div>
 <!--        <div class="form-group input-group">-->
 <!--          <div class="input-group-prepend">-->
@@ -68,19 +68,19 @@
           <div class="input-group-prepend">
             <span class="input-group-text"> <i class="fa fa-user"></i> </span>
           </div>
-          <input name="" class="form-control" placeholder="username" type="text">
+          <input name="username" class="form-control" placeholder="username" type="text" [(ngModel)]="username">
         </div>
         <div class="form-group input-group">
           <div class="input-group-prepend">
             <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
           </div>
-          <input class="form-control" placeholder="password" type="password">
+          <input name="password" class="form-control" placeholder="password" type="password" [(ngModel)]="password">
         </div>
         <div class="form-group input-group">
           <div class="input-group-prepend">
             <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
           </div>
-          <input class="form-control" placeholder="repeat password" type="password">
+          <input name="confirm_password" class="form-control" placeholder="repeat password" type="password">
         </div>
         <div class="form-group">
           <button type="submit" class="btn btn-primary btn-block"> Create Account  </button>
