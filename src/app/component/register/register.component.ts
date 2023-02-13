@@ -15,6 +15,7 @@ export class RegisterComponent implements OnInit {
   phone_number: string
   username: string;
   password: string;
+  repeated_password: string;
 
 
   constructor(private apiService: ApiService, private router: Router) {
@@ -24,6 +25,7 @@ export class RegisterComponent implements OnInit {
     this.phone_number = "";
     this.username = "";
     this.password = "";
+    this.repeated_password = "";
   }
 
 
@@ -45,7 +47,7 @@ export class RegisterComponent implements OnInit {
 
   validateForm(): boolean {
     if (this.name == "" || this.surname == "" || this.phone_number == "" || this.email == "" ||
-        this.password == "" || this.username == "") {
+        this.password == "" || this.repeated_password == "" || this.username == "") {
       alert('All fields are required!');
       return false;
     }
@@ -54,7 +56,10 @@ export class RegisterComponent implements OnInit {
 
 
   checkPasswordMatching(): boolean {
-    return true;
+    if (this.password === this.repeated_password) {
+      return true;
+    }
+    return false;
   }
 
 
@@ -65,6 +70,7 @@ export class RegisterComponent implements OnInit {
     this.phone_number = "";
     this.username = "";
     this.password = "";
+    this.repeated_password = "";
   }
 
 
