@@ -10,8 +10,13 @@ import {environment} from "../../environments/environment";
 export class ApiService {
 
   private readonly apiUrl = environment.backendApi;
+  username: string;
+  provider: boolean;
 
-  constructor(private httpClient:HttpClient) { }
+  constructor(private httpClient:HttpClient) {
+    this.username = "";
+    this.provider = false;
+  }
 
   login(username: string, password: string): Observable<JWT> {
     return this.httpClient.post<JWT>(`${this.apiUrl}/auth/user/login`,{
@@ -29,6 +34,13 @@ export class ApiService {
       "phoneNumber": phone_number,
       "username": username,
       "password": password
+    });
+  }
+
+  provider_login(username: string, password: string): Observable<JWT> {
+    return this.httpClient.post<JWT>(`${this.apiUrl}/auth/provider/login`,{
+      "username":username,
+      "password":password
     });
   }
 
