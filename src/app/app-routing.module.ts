@@ -5,7 +5,6 @@ import {LoginComponent} from "./component/login/login.component";
 import {RegisterComponent} from "./component/register/register.component";
 import {ProviderHomeComponent} from "./component/provider-home/provider-home.component";
 import {BookingListComponent} from "./component/booking-list/booking-list.component";
-import {ProviderLoginComponent} from "./component/provider-login/provider-login.component";
 
 const routes: Routes = [
   {
@@ -27,11 +26,8 @@ const routes: Routes = [
   {
     path: "bookings",
     component: BookingListComponent
-  },
-  {
-    path: "provider/login",
-    component: ProviderLoginComponent
   }
+
 ]
 
 @NgModule({

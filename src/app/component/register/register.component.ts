@@ -36,14 +36,12 @@ export class RegisterComponent implements OnInit {
 
     this.apiService.register(this.name, this.surname, this.email, this.phone_number,
                               this.username, this.password).subscribe( res => {
-        this.apiService.username = this.username;
         this.router.navigate(['']);
       }, (error) => {
         alert("User with this username already exists!");
         this.resetData();
       }
     );
-
   }
 
 

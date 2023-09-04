@@ -14,7 +14,6 @@ import { LoginComponent } from './component/login/login.component';
 import { RegisterComponent } from './component/register/register.component';
 import { ProviderHomeComponent } from './component/provider-home/provider-home.component';
 import { BookingListComponent } from './component/booking-list/booking-list.component';
-import { ProviderLoginComponent } from './component/provider-login/provider-login.component';
 
 @NgModule({
   declarations: [
@@ -23,8 +22,7 @@ import { ProviderLoginComponent } from './component/provider-login/provider-logi
     LoginComponent,
     RegisterComponent,
     ProviderHomeComponent,
-    BookingListComponent,
-    ProviderLoginComponent
+    BookingListComponent
   ],
   imports: [
     BrowserModule,
